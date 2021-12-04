@@ -10,7 +10,7 @@
                 <h2 class="logo-img mx-auto mb-2 mt-2">ログイン</h2>
             </div>
 
-            <form class="login" action="#" accept-charset="UTF-8" method="post">
+            <form class="login" action="{{ route('login.post') }}" accept-charset="UTF-8" method="post">
                 @csrf
                 <div class="form-group">
                     <input class="form-control" type="email" placeholder="メールアドレス" name="email" value="">
@@ -23,7 +23,7 @@
                 </div>
             </form>
 
-            <p class="devise-link texr-center mb-2">アカウントをお持ちでない方はこちら<a href="#">新規登録</a></p>
+            <p class="devise-link text-center mb-2">アカウントをお持ちでない方は<a href="{{ route('signup') }}">こちら</a></p>
         </div>
     </div>
 </div>
