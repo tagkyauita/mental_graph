@@ -25,3 +25,11 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('users/{id}', 'UsersController@show')->middleware('auth')->name('users.show');
 Route::get('users/{id}/edit', 'UsersController@edit')->name('users.edit');
 Route::put('users/{id}', 'UsersController@update')->name('users.update');
+
+Route::get('medical/{id}', 'MedicalController@show')->middleware('auth')->name('medical.show');
+Route::get('medical/{id}/edit', 'MedicalController@edit')->name('medical.edit');
+Route::put('medical/{id}', 'MedicalController@update')->name('medical.update');
+
+Route::get('records/{id}', 'RecordsController@show')->middleware('auth')->name('records.show');
+Route::get('records/{id}/edit', 'RecordsController@edit')->name('records.edit');
+Route::put('records/{id}', 'RecordsController@update')->name('records.update');

@@ -4,12 +4,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-md-auto align-items-center">
             <li>
-                <a class="btn btn-info" href="#"><i class="fas fa-pencil-alt"></i>
+                <a class="btn btn-info" href="{{ route('records.edit', Auth::id() ) }}"><i class="fas fa-pencil-alt"></i>
                 記録する
                 </a>
             </li>
             <li>
                 <a class="nav-link far fa-user fa-lg" href="{{ route('users.show', Auth::id() )}}">
+                </a>
+            </li>
+            <li>
+                <a class="nav-link far fa-user fa-lg" href="{{ route('medical.show', Auth::id() )}}">
+                </a>
+            </li>
+            <li>
+                <a class="nav-link far fa-user fa-lg" href="{{ route('records.show', Auth::id() )}}">
                 </a>
             </li>
         </ul>
