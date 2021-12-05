@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMedicalsTable extends Migration
+class CreateReportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateMedicalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('medicals', function (Blueprint $table) {
+        Schema::create('reports', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('medical');
+            $table->integer('feeling');
+            $table->string('note');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -30,6 +31,6 @@ class CreateMedicalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('medicals');
+        Schema::dropIfExists('reports');
     }
 }

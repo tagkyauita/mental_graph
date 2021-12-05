@@ -6,6 +6,6 @@
 
 ここにjavascriptのグラフが載る
 
-<a href="{{ route('records.edit', Auth::id() ) }}">今日の調子を入力]</a>
+<a href="{{ route('reports.edit', Auth::id() ) }}">今日の調子を入力]</a>
 
 @endsection

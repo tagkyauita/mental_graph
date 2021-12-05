@@ -9,6 +9,6 @@
 /
 /
 /
-<a href="{{ route('medical.edit', Auth::id() ) }}">編集する</a>
+<a href="{{ route('kartes.edit', Auth::id() ) }}">編集する</a>
 
 @endsection
