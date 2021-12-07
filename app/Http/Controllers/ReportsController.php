@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Report;
 use App\User;
+use DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\ReportRequest;
@@ -24,14 +25,15 @@ class ReportsController extends Controller
         $report->note = $request->note;
         $report->save();
 
-        return redirect()->route('index');
+        return redirect()->route('reports.show', Auth::id());
     }
 
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $user = User::findOrFail($id);
+        $report_data = Report::all();
 
-        return view('reports.show', compact('user'));
+        return view('reports.show', compact('user', 'report_data'));
     }
 
     public function edit($id)

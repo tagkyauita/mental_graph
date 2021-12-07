@@ -15,8 +15,8 @@
                         @csrf
                         @method('POST')
                         <div class="md-form">
-                            <p>１．現在の気分に当てはまる数字を選択してください。</p>
-                            <p>※ +躁 〜 -鬱 (1=注意深く観察, 2=行動をとる, 3=医師に連絡, 5=病院に行く)</p>
+                            <p class="question">１．現在の気分に当てはまる数字を選択してください。</p>
+                            <p class="q-discription">※ +躁 〜 -鬱 (1=注意深く観察, 2=行動をとる, 3=医師に連絡, 5=病院に行く)</p>
                             <input type="radio" name="feeling" value="5"/> +5 
                             <input type="radio" name="feeling" value="4"/> +4 
                             <input type="radio" name="feeling" value="3"/> +3 
@@ -31,7 +31,7 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <p>２．起きた出来事、対処法、処方薬以外に服薬したサプリなどについて記入してください。</p>
+                            <p class="question">２．起きた出来事、対処法、処方薬以外に服薬したサプリなどについて記入してください。</p>
                             <textarea name="note" class="form-control" rows="10" placeholder="例：良かったこと→久々に友人と会った。嫌なこと→仕事で2度目のミスをした。サプリ：ホスファリチルゼリン200mg, ビタミンB12 25bcg"></textarea>
                         </div>
                         <div class="text-center">

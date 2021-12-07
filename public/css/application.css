@@ -14,3 +14,102 @@
 .discription {
     display: inline-block;
 }
+
+/* header */
+
+nav ul {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+    position: relative;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+nav ul li a::after,
+nav ul li a::before {
+    display: block;
+    content: ”;
+    position: absolute;
+}
+nav ul li a::after {
+    top: 10%;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    background-color: #ccc;
+    border-radius: 100%;
+}
+nav ul li a.current::after,
+nav ul li a:hover:after {
+    background-color: #3498db;
+}
+nav ul li a::before {
+    z-index: 2;
+    top: 40%;
+    right: 5px;
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+nav ul li a {
+    text-decoration: none;
+    color: #aaa;
+    display: inline-block;
+    width: 100%;
+}
+nav ul li a.current {
+    color: #555;
+}
+nav ul li a:hover {
+    color: #555;
+}
+
+/* graph show */
+
+.scroll {
+    height: 300px;
+    overflow: auto;
+}
+
+/* karten */
+
+.list-style-karte {
+    color: black;
+    border-left: solid 8px orange; /*左側の線*/
+    background: whitesmoke; /*背景色*/
+    margin-bottom: 5px; /*下のバーとの余白*/
+    line-height: 1.5;
+    border-radius: 0 15px 15px 0; /*右側の角だけ丸く*/
+    padding: 0.5em;
+    list-style-type: none !important;
+}
+
+/* create */
+
+.question {
+    color: black;
+    border-left: solid 8px orange; /*左側の線*/
+    background: whitesmoke; /*背景色*/
+    margin-bottom: 5px; /*下のバーとの余白*/
+    line-height: 1.5;
+    border-radius: 0 15px 15px 0; /*右側の角だけ丸く*/
+    padding: 0.5em;
+    list-style-type: none !important;
+}
+
+.q-discription {
+    font-size: 15px;
+    color: #6b6b6b;
+    background: whitesmoke; /*背景色*/
+    margin-bottom: 5px; /*下のバーとの余白*/
+    line-height: 1.5;
+    border-radius: 0 15px 15px 0; /*右側の角だけ丸く*/
+    padding: 0.5em;
+    list-style-type: none !important;
+}

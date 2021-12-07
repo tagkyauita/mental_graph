@@ -7,13 +7,14 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-class KartesController extends Controller
+class KartenController extends Controller
 {
     public function show($id)
     {
         $user = User::findOrFail($id);
+        $karten = Karte::all();
 
-        return view('kartes.show', compact('user'));
+        return view('karten.show', compact('user', 'karten'));
     }
 
     public function edit($id)
@@ -21,7 +22,7 @@ class KartesController extends Controller
         $user = User::findOrFail($id);
         
         if (Auth::id() == $user->id){
-            return view('kartes.edit', compact('user'));
+            return view('karten.edit', compact('user'));
         }
     }
 }

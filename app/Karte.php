@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Report extends Model
+class Karte extends Model
 {
-    protected $table = "reports";
+    protected $table = 'karten';
 
-    protected $fillable = ['feeling','note'];
+    protected $fillable = ['medicine','discription'];
 
     public function user()
     {

@@ -2,23 +2,18 @@
     <a class="navbar-brand" href="{{ route('index') }}"><i class="fas fa-home fa-2x"></i>
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-md-auto align-items-center">
+        <ul>
             <li>
-                <a class="btn btn-info" href="{{ route('reports.create') }}"><i class="fas fa-pencil-alt"></i>
-                記録する
-                </a>
+                <a href="{{ route('reports.create') }}">記録する</a>
             </li>
             <li>
-                <a class="nav-link far fa-user fa-lg" href="{{ route('users.show', Auth::id() )}}">
-                </a>
+                <a href="{{ route('reports.show', Auth::id() )}}">グラフ</a>
             </li>
             <li>
-                <a class="nav-link far fa-user fa-lg" href="{{ route('kartes.show', Auth::id() )}}">
-                </a>
+                <a href="{{ route('users.show', Auth::id() )}}">アカウント</a>
             </li>
             <li>
-                <a class="nav-link far fa-user fa-lg" href="{{ route('reports.show', Auth::id() )}}">
-                </a>
+                <a href="{{ route('karten.show', Auth::id() )}}">カルテ</a>
             </li>
         </ul>
     </div>

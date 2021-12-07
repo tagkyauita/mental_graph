@@ -36,6 +36,7 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id);
 
+        // 下記バリデーション処理はFormRequestに移行してください
         $validator = Validator::make($request->all(),[
                 'name'=>'required|string|max:255',
                 'email'=>[

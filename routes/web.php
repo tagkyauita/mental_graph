@@ -12,6 +12,7 @@
 */
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReportsController;
 
 Route::get('/', 'UsersController@index')->middleware('auth')->name('index');
 
@@ -26,9 +27,9 @@ Route::get('users/{id}', 'UsersController@show')->middleware('auth')->name('user
 Route::get('users/{id}/edit', 'UsersController@edit')->name('users.edit');
 Route::put('users/{id}', 'UsersController@update')->name('users.update');
 
-Route::get('kartes/{id}', 'KartesController@show')->middleware('auth')->name('kartes.show');
-Route::get('kartes/{id}/edit', 'KartesController@edit')->name('kartes.edit');
-Route::put('kartes/{id}', 'KartesController@update')->name('kartes.update');
+Route::get('karten/{id}', 'KartenController@show')->middleware('auth')->name('karten.show');
+Route::get('karten/{id}/edit', 'KartenController@edit')->name('karten.edit');
+Route::put('karten/{id}', 'KartenController@update')->name('karten.update');
 
 Route::get('reports', 'ReportsController@create')->name('reports.create');
 Route::post('reports', 'ReportsController@store')->name('reports.store');
