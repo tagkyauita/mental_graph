@@ -10,6 +10,16 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function reports()
+    {
+        return $this->hasMany(Report::class);
+    }
+
+    public function karten()
+    {
+        return $this->hasMany(Karte::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

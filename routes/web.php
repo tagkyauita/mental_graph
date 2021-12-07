@@ -12,6 +12,7 @@
 */
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReportsController;
 
 Route::get('/', 'UsersController@index')->middleware('auth')->name('index');
 
@@ -25,3 +26,13 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('users/{id}', 'UsersController@show')->middleware('auth')->name('users.show');
 Route::get('users/{id}/edit', 'UsersController@edit')->name('users.edit');
 Route::put('users/{id}', 'UsersController@update')->name('users.update');
+
+Route::get('karten/{id}', 'KartenController@show')->middleware('auth')->name('karten.show');
+Route::get('karten/{id}/edit', 'KartenController@edit')->name('karten.edit');
+Route::put('karten/{id}', 'KartenController@update')->name('karten.update');
+
+Route::get('reports', 'ReportsController@create')->name('reports.create');
+Route::post('reports', 'ReportsController@store')->name('reports.store');
+Route::get('reports/{id}', 'ReportsController@show')->middleware('auth')->name('reports.show');
+Route::get('reports/{id}/edit', 'ReportsController@edit')->name('reports.edit');
+Route::put('reports/{id}', 'ReportsController@update')->name('reports.update');
