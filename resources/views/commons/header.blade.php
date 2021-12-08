@@ -13,7 +13,7 @@
                 <a href="{{ route('users.show', Auth::id() )}}">アカウント</a>
             </li>
             <li>
-                <a href="{{ route('karten.show', Auth::id() )}}">カルテ</a>
+                <a href="{{ route('karten.show', Auth::id() ) }}">カルテ</a>
             </li>
         </ul>
     </div>
