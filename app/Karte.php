@@ -14,4 +14,9 @@ class Karte extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function discriptions()
+    {
+        return $this->hasMany(Discription::class);
+    }
 }

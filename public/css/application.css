@@ -113,3 +113,39 @@ nav ul li a:hover {
     padding: 0.5em;
     list-style-type: none !important;
 }
+
+/* ボタン類 */
+
+.btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btn--orange,
+a.btn--orange {
+    color: #fff;
+    background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+    color: #fff;
+    background: #f56500;
+}
+
+a.btn--radius {
+    border-radius: 100vh;
+}
+
+.mdcn-add {
+    margin-left: auto;
+}
+
+.mscn-disc-edit {
+    margin-left: auto;
+}
+
+.edit_button {
+    display: inline-block;
+}

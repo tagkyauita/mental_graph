@@ -8,14 +8,22 @@
             @include('commons.error_messages')
             <div class="card mt-5">
                 <div class="card-header">
-                    薬の名称を編集
+                    薬についての説明を編集する
                 </div>
                 <div class="card-body">
-                    <form class="upload" id="new_post" enctype="multipart/form-data" action="{{ route('karten.update', $karte->id ) }}" accept-charset="UTF-8" method="POST">
+                    <form class="upload" id="new_post" enctype="multipart/form-data" action="{{ route('discription.update', Auth::id() ) }}" accept-charset="UTF-8" method="POST">
                     @method('PUT')    
                     @csrf
+
                         <div class="form-group">
-                            <input class="form-control" placeholder="薬の名称を変更" type="text" name="medicine" value=""/>
+                            <select name="medicine_id" type="text" class="form-control">
+                                @foreach($karten as $karte)
+                                    <option value="{{ $karte->id }}">{{ $karte->medicine }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="薬についての説明" type="text" name="discription" value=""/>
                         </div>
                         <div class="text-center">
                             <input type="submit" name="commit" value="更新する" class="btn btn--orange btn--radius" data-disable-with="更新する"/>
